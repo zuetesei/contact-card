@@ -3,7 +3,7 @@ import "./form";
 import "../css/index.css";
 import { Tooltip, Toast, Popover } from "bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { initdb, getDb, postDb } from "./database";
+import { initdb, getDb, postDb, deleteDb } from "./database";
 import { fetchCards } from "./card";
 import { toggleForm, clearForm } from "./form";
 
@@ -54,3 +54,15 @@ form.addEventListener('submit', event => {
     // Reload the DOM
     fetchCards();
 });
+
+window.deleteCard = (e) => {
+    let id = parseInt(e.id);
+    // delete the card
+    deleteDb(id);
+
+    // reload the DOM
+    fetchCards();
+};
+
+
+
