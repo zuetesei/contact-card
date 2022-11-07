@@ -11,6 +11,13 @@ import Logo from "../images/logo.png";
 import Bear from "../images/bear.png";
 import Dog from "../images/dog.png";
 
+if ('serviceWorker' in navigator) {
+    // use window load event to keep the page load performant
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js');
+    })
+};
+
 window.addEventListener('load', function () {
     initdb();
     fetchCards();
