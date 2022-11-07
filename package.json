@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/zuetesei/contact-card#readme",
   "dependencies": {
-    "concurrently": "^7.5.0"
+    "concurrently": "^7.5.0",
+    "regenerator-runtime": "^0.13.10"
   }
 }
